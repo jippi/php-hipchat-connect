@@ -1,3 +1,21 @@
+# Introduction
+
+This toolkit will help you construct valid HipChat connect manifest files.
+
+It provides basic validation for the most important keys, and help you avoid hours of
+frustrating debugging, but guiding you through a fluent and consistent interface for
+configuring your HipChat Connect manifest files.
+
+If any validation errors are found, an `HipChat\Exception\ValidationException` will be thrown.
+This exception instance have a `getValidationErrorCount` and `getValidationErrors` method to help
+inspect the found validation errors.
+
+Most code currently live in the `HipChat\Manifest\AbstractNode` and `HipChat\Manifest\Capabilities` classes.
+
+The toolkit uses `cakephp/validation` for data validation
+
+# Example
+
 ```php
 <?php
 $generator = new \HipChat\Manifest\Generator();

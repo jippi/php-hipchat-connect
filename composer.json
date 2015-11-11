@@ -1,0 +1,15 @@
+{
+    "name": "jippi/php-hipchat-connect",
+    "description": "HipChat connect (v2) api helpers",
+    "keywords": ["HipChat", "API", "HipChat-Connect"],
+    "license": "MIT",
+
+    "autoload": {
+        "psr-4": {
+            "HipChat\\": "src"
+        }
+    },
+    "require": {
+        "cakephp/validation": "^3.1"
+    }
+}
