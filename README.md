@@ -32,7 +32,10 @@ $generator->capabilities()
 $generator->capabilities()
     ->glance('demo')
         ->set('key', 'meh')
-        ->set('icon', ['url' => 'https://addon.example.com/small.jpg', 'url@2x' => 'https://addon.example.com/small@2x.jpg'])
+        ->set('icon', [
+            'url' => 'https://addon.example.com/small.jpg',
+            'url@2x' => 'https://addon.example.com/small@2x.jpg'
+        ])
         ->set('name', ['value' => 'Locked Repositories'])
         ->set('target', ['value' => 'locked.repos.sidebar'])
         ->set('queryUrl', 'https://addon.example.com/glance/example');
