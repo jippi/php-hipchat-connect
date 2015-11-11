@@ -48,6 +48,13 @@ class Capabilities {
     protected $_installable;
 
     /**
+     * List of hipchatApiConsumer capabilities
+     *
+     * @var HipChat\Capabilities\ApiConsumerCapability
+     */
+    protected $_apiConsumer;
+
+    /**
      * Return the keys required for a validation representation for the capabilities key in the
      * root manifest document
      *
@@ -60,6 +67,7 @@ class Capabilities {
         $output['dialog'] = array_values($this->_dialogs);
         $output['glance'] = array_values($this->_glances);
         $output['installable'] = $this->_installable;
+        $output['hipchatApiConsumer'] = $this->_apiConsumer;
 
         $output = array_filter($output);
 
@@ -164,8 +172,8 @@ class Capabilities {
         return $this->_installable = $this->_installable ?: new Capability\InstallableCapability();
     }
 
-    public function apiConsumer(Capability $apiConsumer = null) {
-        throw new NotImplementedCapabilityException(__METHOD__ . ' capability is not implemented yet');
+    public function apiConsumer() {
+        return $this->_apiConsumer = $this->_apiConsumer ?: new Capability\ApiConsumerCapability();
     }
 
     public function internalChathook(Capability $internalChathook = null) {
