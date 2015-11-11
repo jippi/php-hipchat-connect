@@ -8,7 +8,7 @@ use HipChat\Manifest\AbstractNode;
  *
  * @see https://www.hipchat.com/docs/apiv2/actions
  */
-class Action extends AbstractNode {
+class ActionCapability extends AbstractNode {
 
     /**
      * Construct validation rules for the current scope

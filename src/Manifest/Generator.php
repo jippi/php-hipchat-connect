@@ -50,9 +50,9 @@ class Generator extends AbstractNode {
      */
     public function valid() {
         parent::valid();
-        $this->_vendor->valid();
-        $this->_links->valid();
-        $this->_capabilities->valid();
+        $this->_vendor->validate();
+        $this->_links->validate();
+        $this->_capabilities->validate();
     }
 
     /**

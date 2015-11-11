@@ -172,4 +172,28 @@ class AbstractNode implements JsonSerializable {
         return $this->output();
     }
 
+    protected function getI18nValidator() {
+        $i18nValidator = $this->newValidator();
+        $i18nValidator->requirePresence('value');
+        $i18nValidator->add('value', ['required' => ['rule' => 'notBlank']]);
+        return $i18nValidator;
+    }
+
+    protected function getIconValidator() {
+        $iconValidator = $this->newValidator();
+        $iconValidator->requirePresence('url');
+        $iconValidator->add('url', [
+            'required' => ['rule' => 'notBlank'],
+            'url' => ['rule' => 'url'],
+        ]);
+
+        $iconValidator->requirePresence('url@2x');
+        $iconValidator->add('url@2x', [
+            'required' => ['rule' => 'notBlank'],
+            'url' => ['rule' => 'url'],
+        ]);
+
+        return $iconValidator;
+    }
+
 }

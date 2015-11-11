@@ -8,7 +8,7 @@ use HipChat\Manifest\AbstractNode;
  *
  * @see https://www.hipchat.com/docs/apiv2/webhooks
  */
-class Webhook extends AbstractNode {
+class WebhookCapability extends AbstractNode {
 
     /**
      * Construct validation rules for the current scope
