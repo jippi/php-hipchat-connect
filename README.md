@@ -14,10 +14,33 @@ Most code currently live in the `HipChat\Manifest\AbstractNode` and `HipChat\Man
 
 The toolkit uses `cakephp/validation` for data validation
 
+# Installation
+
+`composer.json`
+
+```json
+{
+    "minimum-stability": "dev",
+    "require": {
+        "jippi/php-hipchat-connect": "dev-master"
+    }
+}
+```
+
+run `composer install`
+
+or
+
+```
+composer require jippi/php-hipchat-connect
+```
+
 # Example
 
 ```php
 <?php
+require 'vendor/autoload.php';
+
 $generator = new \HipChat\Manifest\Generator();
 $generator->name = 'Example App';
 $generator->description = 'An integration that does wonderful things with examples';
